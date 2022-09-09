@@ -13,6 +13,7 @@ export const useAuthStore = defineStore("authStore", {
     userData: null,
     loadingAuth: false,
     loadingSession: false,
+    emailVerified: false,
   }),
   actions: {
     async registerUser(email, password) {
@@ -49,8 +50,8 @@ export const useAuthStore = defineStore("authStore", {
         this.userData = {
           email: user.email,
           uid: user.uid,
-          emailVerified: user.emailVerified,
         };
+        this.emailVerified = user.emailVerified;
         console.log("logged in: ", user.email);
         router.push("/");
       } catch (error) {
@@ -77,8 +78,8 @@ export const useAuthStore = defineStore("authStore", {
               this.userData = {
                 email: user.email,
                 uid: user.uid,
-                emailVerified: user.emailVerified,
               };
+              this.emailVerified = user.emailVerified;
             } else {
               this.userData = null;
             }
