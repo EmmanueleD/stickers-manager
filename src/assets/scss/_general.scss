@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Anaheim&family=Homenaje&family=Stalinist+One&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anaheim", sans-serif;
+}
+
+.fullpage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  padding: 1rem 2rem;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.base-bg {
+  background: rgb(226, 139, 76);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(226, 139, 76, 1) 0%,
+    rgba(217, 103, 21, 1) 51%,
+    rgba(214, 90, 0, 1) 81%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(226, 139, 76, 1) 0%,
+    rgba(217, 103, 21, 1) 51%,
+    rgba(214, 90, 0, 1) 81%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(226, 139, 76, 1) 0%,
+    rgba(217, 103, 21, 1) 51%,
+    rgba(214, 90, 0, 1) 81%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e28b4c",endColorstr="#d65a00",GradientType=1);
+  color: var(--SM-azure);
+}
+
+.logo-font {
+  font-family: "Stalinist One", cursive;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Homenaje", sans-serif;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+p {
+  font-family: "Anaheim", sans-serif;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.p-button.sm-primary {
+  color: #ffffff;
+  background: var(--SM-orange);
+  border: 1px solid var(--SM-orange);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 3px;
+}
+
+.p-button.sm-primary:hover {
+  color: #fff;
+  background: var(--SM-orange-bright);
+  border: 1px solid var(--SM-orange-bright);
+}

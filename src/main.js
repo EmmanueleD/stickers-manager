@@ -10,7 +10,7 @@ import "vue3-lottie/dist/style.css";
 
 import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
-
+import "/node_modules/primeflex/primeflex.css";
 import "./assets/scss/main.scss";
 import "./registerServiceWorker";
 
