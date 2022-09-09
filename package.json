@@ -10,6 +10,7 @@
   "dependencies": {
     "chart.js": "^3.9.1",
     "core-js": "^3.8.3",
+    "firebase": "^9.9.4",
     "pinia": "^2.0.22",
     "primeicons": "^5.0.0",
     "primevue": "^3.17.0",
