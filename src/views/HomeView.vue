@@ -1,5 +1,5 @@
 <template>
-  <PVMessage v-if='!authStore.userData.emailVerified' severity="warn">It seems you didn't verify your email, maybe check
+  <PVMessage v-if='authStore.userData' severity="warn">It seems you didn't verify your email, maybe check
     on your spam folder, Thank you!
   </PVMessage>
   <div class="fullpage">
