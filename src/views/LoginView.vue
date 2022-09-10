@@ -20,7 +20,7 @@
               <PVPassword :feedback="false" toggleMask type="password" v-model="password"></PVPassword>
             </div>
             <div class="grid-center">
-              <PVButton type="submit" class="sm-primary" label="Login" :loading="loadingLogin"></PVButton>
+              <PVButton type="submit" label="Login" :loading="loadingLogin"></PVButton>
             </div>
           </form>
         </div>
