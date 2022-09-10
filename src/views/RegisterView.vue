@@ -1,11 +1,11 @@
 <template>
-  <div class="fullpage base-bg pt-5">
-    <h1 class="mt-5 mb-5">REGISTER NEW USER</h1>
+  <div class="fullpage base-bg pt-5 pb-5">
+    <h1 class="mt-5 mb-5">SIGN UP</h1>
     <PVCard class="shadow-5">
       <template #header>
         <div class=" flex flex-column align-items-center mt-4 pt-4">
           <img style="width:50%" src="../assets/logo.png" alt="">
-          <h5>Stickers Manager</h5>
+          <h3>Stickers Manager</h3>
         </div>
       </template>
       <template #content>
@@ -24,6 +24,8 @@
             </div>
           </form>
         </div>
+        <p class="mt-4">Already have an account? <router-link to="/login">Log in</router-link>
+        </p>
       </template>
     </PVCard>
   </div>
@@ -42,7 +44,7 @@ const loadingLogin = computed(() => {
 
 async function handleSubmit() {
   if (!email.value || password.value.length < 6) {
-    return alert('Please fill the form correctly')
+    return alert('Password should have more then 6 characters')
   }
   await authStore.registerUser(email.value, password.value)
 }

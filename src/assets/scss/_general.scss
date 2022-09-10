@@ -14,10 +14,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .content {
   padding: 1rem 2rem;
+  width: 100%;
 }
 
 .grid-center {
@@ -53,6 +55,33 @@ body {
   color: var(--SM-azure);
 }
 
+.dark-bg {
+  background: rgb(207, 89, 5);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(207, 89, 5, 1) 4%,
+    rgba(217, 91, 2, 1) 25%,
+    rgba(163, 74, 11, 1) 86%,
+    rgba(126, 59, 11, 1) 97%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(207, 89, 5, 1) 4%,
+    rgba(217, 91, 2, 1) 25%,
+    rgba(163, 74, 11, 1) 86%,
+    rgba(126, 59, 11, 1) 97%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(207, 89, 5, 1) 4%,
+    rgba(217, 91, 2, 1) 25%,
+    rgba(163, 74, 11, 1) 86%,
+    rgba(126, 59, 11, 1) 97%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cf5905",endColorstr="#7e3b0b",GradientType=1);
+  color: var(--SM-azure);
+}
+
 .logo-font {
   font-family: "Stalinist One", cursive;
 }
@@ -68,31 +97,31 @@ h6 {
 }
 p {
   font-family: "Anaheim", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
   font-size: 3rem;
 }
 
-h4 {
+h2 {
   font-size: 2.5rem;
 }
 
-h5 {
+h3 {
   font-size: 2rem;
 }
 
-h6 {
+h4 {
   font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
 }
 
 .p-button.sm-primary {
@@ -110,4 +139,19 @@ h6 {
   color: #fff;
   background: var(--SM-orange-bright);
   border: 1px solid var(--SM-orange-bright);
+}
+
+.role-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.hover-elevation-2:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03), 0px 0px 2px rgba(0, 0, 0, 0.06),
+    0px 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.hover-elevation-5:hover {
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.1),
+    0px 4px 5px -2px rgba(0, 0, 0, 0.12), 0px 10px 15px -5px rgba(0, 0, 0, 0.2);
 }

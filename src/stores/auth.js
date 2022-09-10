@@ -4,6 +4,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   sendEmailVerification,
+  signOut,
 } from "firebase/auth";
 import { auth } from "../../firebaseConfig.js";
 import router from "../router/index.js";
@@ -14,6 +15,7 @@ export const useAuthStore = defineStore("authStore", {
     loadingAuth: false,
     loadingSession: false,
     emailVerified: false,
+    authError: "",
   }),
   actions: {
     async registerUser(email, password) {
@@ -56,19 +58,24 @@ export const useAuthStore = defineStore("authStore", {
         router.push("/");
       } catch (error) {
         console.log("UsersStore - Login User error: ", error);
+        this.authError = error.message.slice(10, error.message.length);
       } finally {
         this.loadingAuth = false;
       }
     },
-    // async logoutUser() {
-    //   try {
-    //     const response = await signOut(auth);
-    //     this.userData = null;
-    //     router.push("/login");
-    //   } catch (error) {
-    //     console.log("UsersStore - Logout User error: ", error);
-    //   }
-    // },
+    async logoutUser() {
+      try {
+        this.loadingAuth = true;
+        await signOut(auth);
+        this.userData = null;
+        router.push("/login");
+      } catch (error) {
+        console.log("UsersStore - Logout User error: ", error);
+        this.authError = error.message.slice(10, error.message.length);
+      } finally {
+        this.loadingAuth = false;
+      }
+    },
     currentUser() {
       return new Promise((res, rej) => {
         const unsubscribe = onAuthStateChanged(
