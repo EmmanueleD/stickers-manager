@@ -24,6 +24,7 @@
     padding: 0 1rem;
     max-height: calc(100vh - 250px);
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
