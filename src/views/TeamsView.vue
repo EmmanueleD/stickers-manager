@@ -21,11 +21,11 @@
       <div class=" grid-center col-2 ">
         <h4 style="margin:0">{{ item.number }}</h4>
       </div>
-      <div class="grid-center col-4 ">
+      <div class="grid-center col-5 ">
         <PVInputNumber @input="item.totOwned = $event.value" v-model="item.owned" showButtons
           buttonLayout="horizontal" />
       </div>
-      <div class="grid-center col-6 ">
+      <div class="flex justify-content-end col-4 ">
         <PVInputSwitch v-model="item.consider" />
       </div>
     </div>
