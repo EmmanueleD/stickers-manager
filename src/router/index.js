@@ -12,7 +12,21 @@ const routes = [
   },
   {
     path: "/",
-    component: () => import("@/views/HomeView.vue"),
+    component: () => import("@/views/layout/AppLayout.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("@/views/TeamsView.vue"),
+      },
+      {
+        path: "/statistics",
+        component: () => import("@/views/StatisticsView.vue"),
+      },
+      {
+        path: "/profile",
+        component: () => import("@/views/ProfileView.vue"),
+      },
+    ],
   },
 ];
 

@@ -26,6 +26,9 @@ const baseAlbum = [
           { number: 19, owned: 0, consider: true },
           { number: 20, owned: 0, consider: true },
         ],
+        totConsider: 20,
+        totOwned: 0,
+        percOwned: 0,
       },
       {
         name: "ecuador",
