@@ -19,9 +19,9 @@
       <PVCarousel :value="carouselData" :numVisible="1" :numScroll="1" :responsiveOptions="responsiveOptions">
         <template #item="data">
           <h3 style="text-align: center">{{data.data.name}}</h3>
-          <div class="ranking-list">
+          <div>
 
-            <div v-if="data.data.name == 'TEAMS'">
+            <div class="ranking-list" v-if="data.data.name == 'TEAMS'">
               <div class="grid mb-4" v-for="item in data.data.ranking" :key="item.name">
 
                 <div class="col-3">
@@ -35,7 +35,7 @@
                 </div>
               </div>
             </div>
-            <div v-if="data.data.name == 'STICKERS'">
+            <div class="ranking-list" v-if="data.data.name == 'STICKERS'">
               <div class="grid mb-4" v-for="(item, index) in data.data.ranking" :key="item.name">
 
                 <div class="col-1 pt-4">
