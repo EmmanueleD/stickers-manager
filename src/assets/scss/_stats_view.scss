@@ -1,0 +1,27 @@
+.pie-container {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  .perc-number {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    h4 {
+      margin: 0;
+    }
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  .ranking-list {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    max-height: calc(100vh - 250px);
+    overflow-y: scroll;
+  }
+}
