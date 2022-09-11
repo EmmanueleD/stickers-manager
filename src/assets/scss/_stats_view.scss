@@ -21,7 +21,12 @@
     width: 100%;
     max-width: 350px;
     margin: auto;
+    padding: 0 1rem;
     max-height: calc(100vh - 250px);
     overflow-y: scroll;
   }
+}
+
+.p-progressbar .p-progressbar-value {
+  background-color: var(--SM-orange-bright);
 }

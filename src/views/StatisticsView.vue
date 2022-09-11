@@ -44,8 +44,9 @@
                 <div class="col-6 grid-center">
                   {{ item.name }}
                 </div>
-                <div class="col-5 pt-4">
-                  <PVProgressBar :value="item.perc" :showValue="false"></PVProgressBar>
+                <div class="col-5 pt-4" :value="item.perc">
+                  <PVProgressBar :value="item.perc" :showValue="false">
+                  </PVProgressBar>
                 </div>
               </div>
             </div>
@@ -90,7 +91,7 @@ const carouselData = ref(
       ranking: [
         {
           name: 'team 1',
-          perc: 30
+          perc: 100
         },
         {
           name: 'team 2',
@@ -147,15 +148,15 @@ const carouselData = ref(
         },
         {
           name: 'sticker 2',
-          perc: 10
+          perc: 100
         },
         {
           name: 'stiker 3',
-          perc: 5
+          perc: 50
         },
         {
           name: 'sticker 4',
-          perc: 4
+          perc: 40
         },
         {
           name: 'sticker 1',
@@ -167,11 +168,11 @@ const carouselData = ref(
         },
         {
           name: 'stiker 3',
-          perc: 5
+          perc: 50
         },
         {
           name: 'sticker 4',
-          perc: 4
+          perc: 40
         },
         {
           name: 'sticker 1',
@@ -183,11 +184,11 @@ const carouselData = ref(
         },
         {
           name: 'stiker 3',
-          perc: 5
+          perc: 50
         },
         {
           name: 'sticker 4',
-          perc: 4
+          perc: 40
         },
         {
           name: 'sticker 1',
@@ -199,7 +200,7 @@ const carouselData = ref(
         },
         {
           name: 'stiker 3',
-          perc: 5
+          perc: 50
         },
         {
           name: 'sticker 4',
@@ -250,7 +251,7 @@ const responsiveOptions = [
     numScroll: 2
   },
   {
-    breakpoint: '700px',
+    breakpoint: '800px',
     numVisible: 1,
     numScroll: 1
   }
